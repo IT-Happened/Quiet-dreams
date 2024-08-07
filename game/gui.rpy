@@ -26,17 +26,17 @@ define config.check_conflicting_properties = True
 ## Цвета текста в интерфейсе.
 
 ## Акцентный цвет используется в заголовках и подчёркнутых текстах.
-define gui.accent_color = '#fcfcee'
+define gui.accent_color = '#EAE6CA'
 
 ## Цвет, используемый в текстовой кнопке, когда она не выбрана и не наведена.
-define gui.idle_color = '#fcfcee'
+define gui.idle_color = '#EAE6CA'
 
 ## Small_color используется в маленьком тексте, который должен быть ярче/темнее,
 ## для того, чтобы выделяться.
-define gui.idle_small_color = '#fcfcee'
+define gui.idle_small_color = '#EAE6CA'
 
 ## Цвет, используемых в кнопках и панелях, когда они наведены.
-define gui.hover_color = '#0099ff'
+define gui.hover_color = '#6495ED'
 
 ## Цвет, используемый текстовой кнопкой, когда она выбрана, но не наведена.
 ## Кнопка может быть выбрана, если это текущий экран или текущее значение
@@ -52,8 +52,8 @@ define gui.muted_color = '#66c1ff'
 define gui.hover_muted_color = '#99d6ff'
 
 ## Цвета, используемые в тексте диалогов и выборов.
-define gui.text_color = '#fcfcee'
-define gui.interface_text_color = '#fcfcee'
+define gui.text_color = '#EAE6CA'
+define gui.interface_text_color = '#EAE6CA'
 
 
 ## Шрифты и их размеры #########################################################
@@ -216,7 +216,7 @@ define gui.choice_button_borders = Borders(150, 8, 150, 8)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = '#707070'
+define gui.choice_button_text_idle_color = '#EEE8AA'
 define gui.choice_button_text_hover_color = "#ffffff"
 define gui.choice_button_text_insensitive_color = '#7070707f'
 
