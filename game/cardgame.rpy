@@ -745,14 +745,14 @@ label arenafinal:
         jump arenafinal2
     elif mp > pp:
         $ defeat = True
-        "Проигрыш"
+        "Проигрыш."
         pause 1.0
         jump arenafinal2
     elif mp == pp:
         $ draw = True
         "Ничья. Попробуй еще раз."
         pause 1.0
-        jump cardgame1
+        jump minigame1
     
 
 label arenafinal3:
