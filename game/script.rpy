@@ -386,10 +386,57 @@ label scene6_1:
     
 label minigame2:
     
-    $ enemy_deck2 = [lava_hound2, archers2, princess2, mosquetear2, baby_dragon2]
+    $ enemy_deck = [lava_hound2, archers2, princess2, mosquetear2, baby_dragon2]
 
-    call cardgame1 from _call_cardgame2
+    call cardgame2 from _call_cardgame2
     
-    jump mini1
+    return
     
+label end1:
+    hide screen deck
+    hide screen cards_table
+    hide screen points
+    hide screen arena
+    hide arena
+
+    stop music fadeout 5.0
+    
+    
+    
+    
+    scene home
+    "абобус"
+    return
+    
+label end2:
+
+    hide screen deck
+    hide screen cards_table
+    hide screen points
+    hide screen arena
+    hide arena
+
+    stop music fadeout 5.0
+    
+    
+    
+    
+    scene lug
+    "автобус"
+    return
+    
+label end3:
+    hide screen deck
+    hide screen cards_table
+    hide screen points
+    hide screen arena
+    hide arena
+
+    stop music fadeout 5.0
+    
+    
+    
+    
+    scene mansion
+    "смэрт"
     return
