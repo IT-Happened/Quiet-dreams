@@ -493,8 +493,11 @@ label cardgame1:
     $ victory = None
     $ defeat = None
     $ draw = None
-    #default deck_real = [hog_rider, archers, princess, mosquetear, barbarians, valkyrie, night_witch]
-    default deck_real = [hog_rider, archers, princess, mosquetear, barbarians, valkyrie]
+    $ game2 = None
+    if game2:
+        default deck_real = [hog_rider, archers, princess, mosquetear, barbarians, valkyrie, night_witch, mega_knight]
+    elif:
+        default deck_real = [hog_rider, archers, princess, mosquetear, barbarians, valkyrie]
     default deck_cards = []
     $ number = 0
 
