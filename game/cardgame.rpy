@@ -901,11 +901,18 @@ screen points:
         xalign 0.1
         yalign 0.7
 
-    vbox:
-        xalign 0.1
-        yalign 0.95
-        frame:
-            textbutton _("Сдаться") action Jump("arenafinal3") xpadding 20 ypadding 20
+    if game2:
+        vbox:
+            xalign 0.1
+            yalign 0.95
+            frame:
+                textbutton _("Изменить карты") action Jump("minigame2") xpadding 20 ypadding 20
+    else:
+        vbox:
+            xalign 0.1
+            yalign 0.95
+            frame:
+                textbutton _("Сдаться") action Jump("arenafinal3") xpadding 20 ypadding 20
 
 screen arena:
 

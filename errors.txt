@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/cardgame.rpy", line 801: Indentation mismatch.
+File "game/cardgame.rpy", line 904: screen expects a non-empty block.
+    if game2:
+             ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Thu Aug  8 15:11:06 2024
+Thu Aug  8 15:20:56 2024
