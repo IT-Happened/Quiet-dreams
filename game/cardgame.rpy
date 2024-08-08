@@ -756,7 +756,7 @@ label arenafinal:
     
 
 label arenafinal3:
-    "You lost the game."
+    "Ты проиграл."
     $ defeat = True
     jump arenafinal2
 
@@ -850,7 +850,7 @@ screen points:
         xalign 0.1
         yalign 0.95
         frame:
-            textbutton _("Give Up") action Jump("arenafinal3") xpadding 20 ypadding 20
+            textbutton _("Сдаться") action Jump("arenafinal3") xpadding 20 ypadding 20
 
 screen arena:
 
