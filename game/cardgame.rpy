@@ -493,12 +493,45 @@ label cardgame1:
     $ victory = None
     $ defeat = None
     $ draw = None
-    $ game2 = None
-    if game2:
-        default deck_real = [hog_rider, archers, princess, mosquetear, barbarians, valkyrie, night_witch, mega_knight]
-    elif:
-        default deck_real = [hog_rider, archers, princess, mosquetear, barbarians, valkyrie]
+        #default deck_real = [hog_rider, archers, princess, mosquetear, barbarians, valkyrie, night_witch, mega_knight]
+    default deck_real = [hog_rider, archers, princess, mosquetear, barbarians, valkyrie]
     default deck_cards = []
+    $ number = 0
+
+    python:        # para renovar o deck a cada jogo novo
+        for i in deck_real:
+            if i not in deck_cards:
+                deck_cards.append(i)
+
+    jump cardgamei
+    
+label cardgame2:
+
+    play music "back_sound.mp3"
+
+    $ enemies = []
+    $ allies = []
+    $ turn = 0
+    $ luck = 0
+    $ pp = 0
+    $ mp = 0
+    $ b1 = []
+    $ b2 = []
+    $ b3 = []
+    $ b4 = []
+    $ b5 = []
+    $ b6 = []
+    $ b7 = []
+    $ b8 = []
+    $ b9 = []
+
+    $ board = [b1, b2, b3, b4, b5, b6, b7, b8, b9]
+    $ deck = []
+    $ victory = None
+    $ defeat = None
+    $ draw = None
+    $ deck_real = [hog_rider, archers, princess, mosquetear, barbarians, valkyrie, night_witch, mega_knight]
+    $ deck_cards = []
     $ number = 0
 
     python:        # para renovar o deck a cada jogo novo
@@ -741,21 +774,40 @@ label arenafinal:
 
     play music "menu_song.mp3" fadeout 1.0
 
-    if pp > mp:
-        $ victory = True
-        "Победа!"
-        pause 1.0
-        jump arenafinal2
-    elif mp > pp:
-        $ defeat = True
-        "Проигрыш."
-        pause 1.0
-        jump arenafinal2
-    elif mp == pp:
-        $ draw = True
-        "Ничья. Попробуй еще раз."
-        pause 1.0
-        jump minigame1
+    if game2:
+    
+        if pp > mp:
+            $ victory = True
+            "Победа!"
+            pause 1.0
+            jump end1
+        elif mp > pp:
+            $ defeat = True
+            "Проигрыш."
+            pause 1.0
+            jump end2
+        elif mp == pp:
+            $ draw = True
+            "Ничья. Попробуй еще раз."
+            pause 1.0
+            jump minigame2
+    
+    else:
+        if pp > mp:
+            $ victory = True
+            "Победа!"
+            pause 1.0
+            jump arenafinal2
+        elif mp > pp:
+            $ defeat = True
+            "Проигрыш."
+            pause 1.0
+            jump arenafinal2
+        elif mp == pp:
+            $ draw = True
+            "Ничья. Попробуй еще раз."
+            pause 1.0
+            jump minigame1
     
 
 label arenafinal3:

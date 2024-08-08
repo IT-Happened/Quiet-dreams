@@ -1,32 +1,69 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 189, in script
-    python:
-  File "renpy/common/00start.rpy", line 190, in <module>
-    renpy.execute_default_statement(True)
-  File "game/cardgame.rpy", line 499, in execute_default
-    default deck_real = [hog_rider, archers, princess, mosquetear, barbarians, valkyrie]
-Exception: store.deck_real is being given a default a second time.
+  File "game/script.rpy", line 40, in script
+    al "Просыпайся. Эй, соня, просыпайся!"
+  File "renpy/common/000window.rpy", line 114, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 69, in _window_show
+    renpy.with_statement(trans)
+  File "game/screens.rpy", line 239, in execute
+    screen quick_menu():
+  File "game/screens.rpy", line 239, in execute
+    screen quick_menu():
+  File "game/screens.rpy", line 244, in execute
+    if quick_menu:
+  File "game/screens.rpy", line 244, in <module>
+    if quick_menu:
+NameError: name 'quick_menu' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 189, in script
-    python:
-  File "C:\develop\renpy-8.0.0-sdk\renpy\ast.py", line 1138, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\develop\renpy-8.0.0-sdk\renpy\python.py", line 1122, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00start.rpy", line 190, in <module>
-    renpy.execute_default_statement(True)
-  File "C:\develop\renpy-8.0.0-sdk\renpy\exports.py", line 3982, in execute_default_statement
-    i.execute_default(start)
-  File "game/cardgame.rpy", line 499, in execute_default
-    default deck_real = [hog_rider, archers, princess, mosquetear, barbarians, valkyrie]
-Exception: store.deck_real is being given a default a second time.
+  File "game/script.rpy", line 40, in script
+    al "Просыпайся. Эй, соня, просыпайся!"
+  File "C:\develop\renpy-8.0.0-sdk\renpy\ast.py", line 898, in execute
+    statement_name(stmt_name)
+  File "C:\develop\renpy-8.0.0-sdk\renpy\ast.py", line 47, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 114, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 69, in _window_show
+    renpy.with_statement(trans)
+  File "C:\develop\renpy-8.0.0-sdk\renpy\exports.py", line 1758, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\develop\renpy-8.0.0-sdk\renpy\display\core.py", line 2978, in do_with
+    return self.interact(trans_pause=True,
+  File "C:\develop\renpy-8.0.0-sdk\renpy\display\core.py", line 3582, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\develop\renpy-8.0.0-sdk\renpy\display\core.py", line 4055, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\develop\renpy-8.0.0-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\develop\renpy-8.0.0-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\develop\renpy-8.0.0-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  [Previous line repeated 1 more time]
+  File "C:\develop\renpy-8.0.0-sdk\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "C:\develop\renpy-8.0.0-sdk\renpy\display\core.py", line 4055, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\develop\renpy-8.0.0-sdk\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "C:\develop\renpy-8.0.0-sdk\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 239, in execute
+    screen quick_menu():
+  File "game/screens.rpy", line 239, in execute
+    screen quick_menu():
+  File "game/screens.rpy", line 244, in execute
+    if quick_menu:
+  File "game/screens.rpy", line 244, in <module>
+    if quick_menu:
+NameError: name 'quick_menu' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.3.23091805
 Quiet dreams 1.0
-Thu Aug  8 12:40:39 2024
+Thu Aug  8 14:59:13 2024
