@@ -1,26 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/HiddenFolks.rpy", line 51, in script
-    init python:
-  File "game/HiddenFolks.rpy", line 53, in <module>
-    images_auto()
-NameError: name 'images_auto' is not defined
+  File "renpy/common/00start.rpy", line 189, in script
+    python:
+  File "renpy/common/00start.rpy", line 190, in <module>
+    renpy.execute_default_statement(True)
+  File "game/cardgame.rpy", line 499, in execute_default
+    default deck_real = [hog_rider, archers, princess, mosquetear, barbarians, valkyrie]
+Exception: store.deck_real is being given a default a second time.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/HiddenFolks.rpy", line 51, in script
-    init python:
+  File "renpy/common/00start.rpy", line 189, in script
+    python:
   File "C:\develop\renpy-8.0.0-sdk\renpy\ast.py", line 1138, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\develop\renpy-8.0.0-sdk\renpy\python.py", line 1122, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/HiddenFolks.rpy", line 53, in <module>
-    images_auto()
-NameError: name 'images_auto' is not defined
+  File "renpy/common/00start.rpy", line 190, in <module>
+    renpy.execute_default_statement(True)
+  File "C:\develop\renpy-8.0.0-sdk\renpy\exports.py", line 3982, in execute_default_statement
+    i.execute_default(start)
+  File "game/cardgame.rpy", line 499, in execute_default
+    default deck_real = [hog_rider, archers, princess, mosquetear, barbarians, valkyrie]
+Exception: store.deck_real is being given a default a second time.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.3.23091805
 Quiet dreams 1.0
-Wed Aug  7 22:34:59 2024
+Thu Aug  8 12:40:39 2024
