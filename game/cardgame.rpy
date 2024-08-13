@@ -780,12 +780,12 @@ label arenafinal:
             $ victory = True
             "Победа!"
             pause 1.0
-            jump end1
+            jump end2
         elif mp > pp:
             $ defeat = True
             "Проигрыш."
             pause 1.0
-            jump end2
+            jump end3
         elif mp == pp:
             $ draw = True
             "Ничья. Попробуй еще раз."
