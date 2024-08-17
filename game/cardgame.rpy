@@ -780,15 +780,15 @@ label arenafinal:
             $ victory = True
             "Победа!"
             pause 1.0
-            jump end2
+            jump end3
         elif mp > pp:
             $ defeat = True
             "Проигрыш."
             pause 1.0
-            jump end3
+            jump end2
         elif mp == pp:
             $ draw = True
-            "Ничья. Попробуй еще раз."
+            "Ничья. Выберите новую колоду."
             pause 1.0
             jump minigame2
     
@@ -800,18 +800,18 @@ label arenafinal:
             jump arenafinal2
         elif mp > pp:
             $ defeat = True
-            "Проигрыш."
+            "Проигрыш. Ты всегда можешь сдаться."
             pause 1.0
             jump arenafinal2
         elif mp == pp:
             $ draw = True
-            "Ничья. Попробуй еще раз."
+            "Ничья. Ты всегда можешь сдаться."
             pause 1.0
             jump minigame1
     
 
 label arenafinal3:
-    "Ты проиграл."
+    "Проигрыш. Ты всегда можешь сдаться."
     $ defeat = True
     jump arenafinal2
 
