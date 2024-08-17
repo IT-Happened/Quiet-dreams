@@ -29,9 +29,7 @@ define config.version = "1.0"
 ## Текст, помещённый в экран "Об игре". Поместите текст между тройными скобками.
 ## Для отделения абзацев оставляйте между ними пустую строку.
 
-define gui.about = _p(""" Игра сделана на конкурс «Джем Ста Цветов» в 2024 году.
-""")
-
+define gui.about = _p(""" Игра сделана на конкурс «Джем Ста Цветов» в 2024 году.{p}Шрифты:{p}{a=https://github.com/arrowtype/shantell-sans}Shantell Sans Light, designer URL {/a}{p}{a=https://fonts-online.ru/fonts/babayka}Babayka, download URL {/a}{p}{a=https://fonts-online.ru/fonts/gawaa}Gawaa, designer T. Christopher White, download URL {/a}{p}Музыка создана с помощью нейросети Suno AI. {p}Интерфейс создан с помощью нейросети Шедеврум.""")
 
 ## Короткое название игры, используемое для исполняемых файлов и директорий при
 ## постройке дистрибутивов. Оно должно содержать текст формата ASCII и не должно
